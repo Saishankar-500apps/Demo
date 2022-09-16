@@ -13,7 +13,8 @@ jobs:
         with:
           script: |
             import os
-            print("Directory contents:")
+            print("Printed using python script")
+            print("python is working")
   job2:
     needs: job3
     runs-on: ubuntu-latest
