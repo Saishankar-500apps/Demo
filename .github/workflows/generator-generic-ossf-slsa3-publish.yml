@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: python
-      - run: print("hello")
+      - uses: jannekem/run-python-script-action@v1
+        with:
+          script: |
+            import os
+            print("Directory contents:")
   job2:
     needs: job3
     runs-on: ubuntu-latest
